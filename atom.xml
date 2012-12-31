@@ -4,7 +4,7 @@
   <title><![CDATA[sdoro Blog]]></title>
   <link href="http://sdoro.github.com/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T18:08:05+01:00</updated>
+  <updated>2012-12-31T18:49:06+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -12,6 +12,20 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[after Maya release]]></title>
+    <link href="http://sdoro.github.com/blog/2012/12/31/after-maya-release/"/>
+    <updated>2012-12-31T18:44:00+01:00</updated>
+    <id>http://sdoro.github.com/blog/2012/12/31/after-maya-release</id>
+    <content type="html"><![CDATA[<h3>Released the Netkit augmenting Knoppix DVD</h3>
+
+<p>After Knopper has released Knoppix 7.0.5 as &#8220;The Final 21.12.2012 Release&#8221;
+we release the &#8220;After Maya&#8221; netkit DVD :)</p>
+
+<p><img src="http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_z_d.jpg"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[testing Octopress]]></title>

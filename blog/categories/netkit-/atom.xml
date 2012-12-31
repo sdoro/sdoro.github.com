@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: netkit, | sdoro Blog]]></title>
+  <link href="http://sdoro.github.com/blog/categories/netkit-/atom.xml" rel="self"/>
+  <link href="http://sdoro.github.com/"/>
+  <updated>2012-12-31T18:49:06+01:00</updated>
+  <id>http://sdoro.github.com/</id>
+  <author>
+    <name><![CDATA[sdoro]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[after Maya release]]></title>
+    <link href="http://sdoro.github.com/blog/2012/12/31/after-maya-release/"/>
+    <updated>2012-12-31T18:44:00+01:00</updated>
+    <id>http://sdoro.github.com/blog/2012/12/31/after-maya-release</id>
+    <content type="html"><![CDATA[<h3>Released the Netkit augmenting Knoppix DVD</h3>
+
+<p>After Knopper has released Knoppix 7.0.5 as "The Final 21.12.2012 Release"
+we release the "After Maya" netkit DVD :)</p>
+
+<p><img src="http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_z_d.jpg"></p>
+]]></content>
+  </entry>
+  
+</feed>
