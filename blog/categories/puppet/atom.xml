@@ -1,99 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>sdoro Blog</title>
-  <meta name="author" content="sdoro">
-
-  
-  <meta name="description" content="how to detect cdrom device wodim --devices wodim: Overview of accessible drives (1 found &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://sdoro.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="sdoro Blog" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">sdoro Blog</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:sdoro.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Category: puppet | sdoro Blog]]></title>
+  <link href="http://sdoro.github.com/blog/categories/puppet/atom.xml" rel="self"/>
+  <link href="http://sdoro.github.com/"/>
+  <updated>2012-12-31T18:00:54+01:00</updated>
+  <id>http://sdoro.github.com/</id>
+  <author>
+    <name><![CDATA[sdoro]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2012/12/31/testing-octopress/">Testing Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2012-12-31T09:37:00+01:00" pubdate data-updated="true">Dec 31<span>st</span>, 2012</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>how to detect cdrom device</h3>
+  <entry>
+    <title type="html"><![CDATA[testing Octopress]]></title>
+    <link href="http://sdoro.github.com/blog/2012/12/31/testing-octopress/"/>
+    <updated>2012-12-31T09:37:00+01:00</updated>
+    <id>http://sdoro.github.com/blog/2012/12/31/testing-octopress</id>
+    <content type="html"><![CDATA[<h3>how to detect cdrom device</h3>
 
 <pre><code>    wodim --devices
         wodim: Overview of accessible drives (1 found) :
@@ -104,17 +29,17 @@
 
 <h3>gist embedding</h3>
 
-<div><script src='https://gist.github.com/4391898.js'></script>
+<p><div><script src='https://gist.github.com/4391898.js'></script>
 <noscript><pre><code>exit
 umount $KNO/source/sys
 umount $KNO/source/proc
 umount $KNO/source/dev
 </code></pre></noscript></div>
-
+</p>
 
 <h3>Include Code Snippets</h3>
 
-<figure class='code'><figcaption><span> (bigG.sh)</span> <a href='/downloads/code/bigG.sh'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (bigG.sh)</span> <a href='/downloads/code/bigG.sh'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -161,10 +86,8 @@ umount $KNO/source/dev
 </span><span class='line'><span class="c">#adb push $APK/com.google.android.gms-2.apk /system/app/</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># bot</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span> (Nodo.java)</span> <a href='/downloads/code/Nodo.java'>download</a></figcaption>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (Nodo.java)</span> <a href='/downloads/code/Nodo.java'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -183,12 +106,9 @@ umount $KNO/source/dev
 </span><span class='line'>    <span class="n">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
 </span><span class='line'>  <span class="o">}</span>
 </span><span class='line'><span class="o">}</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-
-
-<figure class='code'><figcaption><span> (dhcprelay.startup)</span> <a href='/downloads/code/dhcprelay.startup'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (dhcprelay.startup)</span> <a href='/downloads/code/dhcprelay.startup'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -205,12 +125,9 @@ umount $KNO/source/dev
 </span><span class='line'><span class="c">#DEBIAN_FRONTEND=noninteractive dpkg -i /root/*.deb</span>
 </span><span class='line'>debconf-set-selections /root/sel.txt
 </span><span class='line'>dpkg -i /root/dh*.deb
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-
-
-<figure class='code'><figcaption><span> (lab.conf)</span> <a href='/downloads/code/lab.conf'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (lab.conf)</span> <a href='/downloads/code/lab.conf'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -243,20 +160,14 @@ umount $KNO/source/dev
 </span><span class='line'>pc1<span class="o">[</span>0<span class="o">]=</span>A
 </span><span class='line'>pc2<span class="o">[</span>0<span class="o">]=</span>B
 </span><span class='line'>pc3<span class="o">[</span>0<span class="o">]=</span>C
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-
-
-<figure class='code'><figcaption><span> (pc1.startup)</span> <a href='/downloads/code/pc1.startup'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (pc1.startup)</span> <a href='/downloads/code/pc1.startup'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='sh'><span class='line'>dhclient eth0
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-
-
-
-<figure class='code'><figcaption><span> (router1.startup)</span> <a href='/downloads/code/router1.startup'>download</a></figcaption>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (router1.startup)</span> <a href='/downloads/code/router1.startup'>download</a></figcaption>
  <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
@@ -277,8 +188,7 @@ umount $KNO/source/dev
 </span><span class='line'>/etc/init.d/dhcp3-server start
 </span><span class='line'>
 </span><span class='line'><span class="nb">echo </span>1 &gt; /proc/sys/net/ipv4/ip_forward
-</span></code></pre></td></tr></table></div></figure>
-
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h3>Image tag</h3>
 
@@ -291,69 +201,7 @@ umount $KNO/source/dev
 <p><img src="http://farm9.staticflickr.com/8204/8253165423_8c684e0e23_c_d.jpg"></p>
 
 <p><img src="http://farm9.staticflickr.com/8059/8200594540_ede151048b_b_d.jpg"></p>
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2012/12/31/testing-octopress/">testing Octopress</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2012 - sdoro -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>
