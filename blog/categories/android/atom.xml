@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[sdoro Blog]]></title>
-  <link href="http://sdoro.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: android | sdoro Blog]]></title>
+  <link href="http://sdoro.github.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
   <updated>2012-12-31T09:43:17+01:00</updated>
   <id>http://sdoro.github.com/</id>
