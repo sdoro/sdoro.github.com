@@ -4,7 +4,7 @@
   <title><![CDATA[sdoro Blog]]></title>
   <link href="http://sdoro.github.com/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T17:52:17+01:00</updated>
+  <updated>2012-12-31T17:54:34+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -207,7 +207,7 @@ umount $KNO/source/dev
 
 <h3>Image tag</h3>
 
-<p><img src="http://www.flickr.com/photos/dorosphoto/8299938355"></p>
+<p><img src="http://farm9.staticflickr.com/8359/8299938355_4c81304181_z_d.jpg"></p>
 ]]></content>
   </entry>
   
