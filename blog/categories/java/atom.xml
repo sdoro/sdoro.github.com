@@ -4,7 +4,7 @@
   <title><![CDATA[Category: java | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/java/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T09:51:52+01:00</updated>
+  <updated>2012-12-31T09:52:54+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -29,8 +29,12 @@
 
 <h3>gist embedeed</h3>
 
-<p><div><script src='https://gist.github.com/.js?file=4391898'></script>
-<noscript><pre><code>&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;https://github.com/gist//4391898&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;</code></pre></noscript></div>
+<p><div><script src='https://gist.github.com/4391898.js'></script>
+<noscript><pre><code>exit
+umount $KNO/source/sys
+umount $KNO/source/proc
+umount $KNO/source/dev
+</code></pre></noscript></div>
 </p>
 ]]></content>
   </entry>
