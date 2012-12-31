@@ -1,0 +1,9 @@
+ip link set eth0 up
+ip address add 10.2.0.2/16 brd + dev eth0
+
+ip route add default via 10.2.0.1
+
+#DEBIAN_FRONTEND=noninteractive dpkg -i /root/*.deb
+debconf-set-selections /root/sel.txt
+dpkg -i /root/dh*.deb
+

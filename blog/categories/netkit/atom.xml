@@ -4,7 +4,7 @@
   <title><![CDATA[Category: netkit | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/netkit/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T10:22:01+01:00</updated>
+  <updated>2012-12-31T10:25:57+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -29,26 +29,166 @@
 
 <h3>gist embedding</h3>
 
-<p>{% gist 4391898 %}</p>
+<p><div><script src='https://gist.github.com/4391898.js'></script>
+<noscript><pre><code>exit
+umount $KNO/source/sys
+umount $KNO/source/proc
+umount $KNO/source/dev
+</code></pre></noscript></div>
+</p>
 
 <h3>Include Code Snippets</h3>
 
-<p>{% include_code bigG.sh %}
-{% include_code Nodo.java %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (bigG.sh)</span> <a href='/downloads/code/bigG.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">APK</span><span class="o">=</span>../apk
+</span><span class='line'>
+</span><span class='line'><span class="c"># start emulator</span>
+</span><span class='line'><span class="c"># emulator -avd am -partition-size 1000</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># wait until emulator is ready:</span>
+</span><span class='line'>adb -s emulator-5554 <span class="nb">wait</span>-for-device
+</span><span class='line'>
+</span><span class='line'><span class="c"># now the loading of the apks</span>
+</span><span class='line'>adb -s emulator-5554 shell mount -o remount,rw -t yaffs2 /dev/block/mtdblock0 /system
+</span><span class='line'>adb shell chmod 777 /system/app
+</span><span class='line'>adb push <span class="nv">$APK</span>/GoogleLoginService.apk      /system/app/
+</span><span class='line'>adb push <span class="nv">$APK</span>/GoogleServicesFramework.apk /system/app/
+</span><span class='line'>adb push <span class="nv">$APK</span>/Phonesky.apk                /system/app/
+</span><span class='line'>adb shell rm /system/app/SdkSetup*
+</span><span class='line'>
+</span><span class='line'><span class="c"># maps:</span>
+</span><span class='line'><span class="c">#adb push $APK/com.google.android.apps.maps-1.apk /system/app/</span>
+</span><span class='line'><span class="c">#adb push $APK/com.google.android.gms-2.apk /system/app/</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># bot</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (Nodo.java)</span> <a href='/downloads/code/Nodo.java'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Nodo</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kt">char</span> <span class="n">info</span><span class="o">;</span>
+</span><span class='line'>  <span class="n">Nodo</span> <span class="n">next</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">Nodo</span> <span class="o">(</span><span class="kt">char</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">info</span> <span class="o">=</span> <span class="n">c</span><span class="o">;</span>
+</span><span class='line'>    <span class="n">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h3>Include Code Snippets</h3>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (dhcprelay.startup)</span> <a href='/downloads/code/dhcprelay.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ip link <span class="nb">set </span>eth0 up
+</span><span class='line'>ip address add 10.2.0.2/16 brd + dev eth0
+</span><span class='line'>
+</span><span class='line'>ip route add default via 10.2.0.1
+</span><span class='line'>
+</span><span class='line'><span class="c">#DEBIAN_FRONTEND=noninteractive dpkg -i /root/*.deb</span>
+</span><span class='line'>debconf-set-selections /root/sel.txt
+</span><span class='line'>dpkg -i /root/dh*.deb
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>{% include_code dhcprelay.startup %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (lab.conf)</span> <a href='/downloads/code/lab.conf'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">machines</span><span class="o">=</span><span class="s2">&quot;router2 dhcprelay pc3 pc1 router1 pc2&quot;</span>
+</span><span class='line'>
+</span><span class='line'>router1<span class="o">[</span>0<span class="o">]=</span>A
+</span><span class='line'>router1<span class="o">[</span>1<span class="o">]=</span>B
+</span><span class='line'>router1<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>router2<span class="o">[</span>0<span class="o">]=</span>C
+</span><span class='line'>router2<span class="o">[</span>1<span class="o">]=</span>A
+</span><span class='line'>router2<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>dhcprelay<span class="o">[</span>0<span class="o">]=</span>C
+</span><span class='line'>dhcprelay<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>pc1<span class="o">[</span>0<span class="o">]=</span>A
+</span><span class='line'>pc2<span class="o">[</span>0<span class="o">]=</span>B
+</span><span class='line'>pc3<span class="o">[</span>0<span class="o">]=</span>C
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p>{% include_code lab.conf %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (pc1.startup)</span> <a href='/downloads/code/pc1.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>dhclient eth0
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<h3>Include Code Snippets</h3>
-
-<p>{% include_code pc1.startup  %}</p>
-
-<h3>Include Code Snippets</h3>
-
-<p>{% include_code router1.startup %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (router1.startup)</span> <a href='/downloads/code/router1.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ip link <span class="nb">set </span>eth0 up
+</span><span class='line'>ip link <span class="nb">set </span>eth1 up
+</span><span class='line'>ip address add 10.0.0.1/16 broadcast 10.0.255.255 dev eth0
+</span><span class='line'>ip address add 10.1.0.1/16 brd       +            dev eth1
+</span><span class='line'>
+</span><span class='line'>ip route add 10.2.0.0/16 via 10.0.0.2
+</span><span class='line'>
+</span><span class='line'>/etc/init.d/dhcp3-server start
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo </span>1 &gt; /proc/sys/net/ipv4/ip_forward
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
   

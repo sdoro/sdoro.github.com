@@ -184,6 +184,100 @@ umount $KNO/source/dev
 
 
 
+
+<figure class='code'><figcaption><span> (dhcprelay.startup)</span> <a href='/downloads/code/dhcprelay.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ip link <span class="nb">set </span>eth0 up
+</span><span class='line'>ip address add 10.2.0.2/16 brd + dev eth0
+</span><span class='line'>
+</span><span class='line'>ip route add default via 10.2.0.1
+</span><span class='line'>
+</span><span class='line'><span class="c">#DEBIAN_FRONTEND=noninteractive dpkg -i /root/*.deb</span>
+</span><span class='line'>debconf-set-selections /root/sel.txt
+</span><span class='line'>dpkg -i /root/dh*.deb
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span> (lab.conf)</span> <a href='/downloads/code/lab.conf'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">machines</span><span class="o">=</span><span class="s2">&quot;router2 dhcprelay pc3 pc1 router1 pc2&quot;</span>
+</span><span class='line'>
+</span><span class='line'>router1<span class="o">[</span>0<span class="o">]=</span>A
+</span><span class='line'>router1<span class="o">[</span>1<span class="o">]=</span>B
+</span><span class='line'>router1<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>router2<span class="o">[</span>0<span class="o">]=</span>C
+</span><span class='line'>router2<span class="o">[</span>1<span class="o">]=</span>A
+</span><span class='line'>router2<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>dhcprelay<span class="o">[</span>0<span class="o">]=</span>C
+</span><span class='line'>dhcprelay<span class="o">[</span>mem<span class="o">]=</span>64
+</span><span class='line'>
+</span><span class='line'>pc1<span class="o">[</span>0<span class="o">]=</span>A
+</span><span class='line'>pc2<span class="o">[</span>0<span class="o">]=</span>B
+</span><span class='line'>pc3<span class="o">[</span>0<span class="o">]=</span>C
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span> (pc1.startup)</span> <a href='/downloads/code/pc1.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>dhclient eth0
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span> (router1.startup)</span> <a href='/downloads/code/router1.startup'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ip link <span class="nb">set </span>eth0 up
+</span><span class='line'>ip link <span class="nb">set </span>eth1 up
+</span><span class='line'>ip address add 10.0.0.1/16 broadcast 10.0.255.255 dev eth0
+</span><span class='line'>ip address add 10.1.0.1/16 brd       +            dev eth1
+</span><span class='line'>
+</span><span class='line'>ip route add 10.2.0.0/16 via 10.0.0.2
+</span><span class='line'>
+</span><span class='line'>/etc/init.d/dhcp3-server start
+</span><span class='line'>
+</span><span class='line'><span class="nb">echo </span>1 &gt; /proc/sys/net/ipv4/ip_forward
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
 
 
