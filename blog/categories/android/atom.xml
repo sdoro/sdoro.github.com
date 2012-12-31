@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T09:57:23+01:00</updated>
+  <updated>2012-12-31T09:59:10+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -39,7 +39,7 @@ umount $KNO/source/dev
 
 <h3>Include Code Snippets</h3>
 
-<p>Include file 'https://github.com/sdoro/android/blob/master/scripts/bigG.sh' contains invalid characters or sequences</p>
+<p>File /home/sdoro/Dropbox/git/blog/octopress/source/downloads/code/https://github.com/sdoro/android/blob/master/scripts/bigG.sh could not be found</p>
 ]]></content>
   </entry>
   
