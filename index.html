@@ -114,7 +114,57 @@ umount $KNO/source/dev
 
 <h3>Include Code Snippets</h3>
 
-<p>File /home/sdoro/Dropbox/git/blog/octopress/source/downloads/code/README.markdown could not be found</p>
+<figure class='code'><figcaption><span> (bigG.sh)</span> <a href='/downloads/code/bigG.sh'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/bash</span>
+</span><span class='line'>
+</span><span class='line'><span class="nv">APK</span><span class="o">=</span>../apk
+</span><span class='line'>
+</span><span class='line'><span class="c"># start emulator</span>
+</span><span class='line'><span class="c"># emulator -avd am -partition-size 1000</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># wait until emulator is ready:</span>
+</span><span class='line'>adb -s emulator-5554 <span class="nb">wait</span>-for-device
+</span><span class='line'>
+</span><span class='line'><span class="c"># now the loading of the apks</span>
+</span><span class='line'>adb -s emulator-5554 shell mount -o remount,rw -t yaffs2 /dev/block/mtdblock0 /system
+</span><span class='line'>adb shell chmod 777 /system/app
+</span><span class='line'>adb push <span class="nv">$APK</span>/GoogleLoginService.apk      /system/app/
+</span><span class='line'>adb push <span class="nv">$APK</span>/GoogleServicesFramework.apk /system/app/
+</span><span class='line'>adb push <span class="nv">$APK</span>/Phonesky.apk                /system/app/
+</span><span class='line'>adb shell rm /system/app/SdkSetup*
+</span><span class='line'>
+</span><span class='line'><span class="c"># maps:</span>
+</span><span class='line'><span class="c">#adb push $APK/com.google.android.apps.maps-1.apk /system/app/</span>
+</span><span class='line'><span class="c">#adb push $APK/com.google.android.gms-2.apk /system/app/</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># bot</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
 </div>
   
   
