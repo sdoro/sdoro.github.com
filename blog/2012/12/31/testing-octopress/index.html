@@ -9,7 +9,13 @@
   <meta name="author" content="sdoro">
 
   
-  <meta name="description" content="how to detect cdrom device wodim --devices wodim: Overview of accessible drives (1 found &hellip;">
+  <meta name="description" content="how to detect cdrom device 1
+2
+3
+4
+5
+$ wodim --devices
+wodim: Overview of accessible drives (1 found &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -92,12 +98,17 @@
 
 <div class="entry-content"><h3>how to detect cdrom device</h3>
 
-<pre><code>    wodim --devices
-        wodim: Overview of accessible drives (1 found) :
-        -------------------------------------------------------------------------
-         0  dev='/dev/sg1'      rwrw-- : 'TSSTcorp' 'DVD+-RW TS-H653B'
-        -------------------------------------------------------------------------
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ wodim --devices
+</span><span class='line'>wodim: Overview of accessible drives (1 found) :
+</span><span class='line'>-------------------------------------------------------------------------
+</span><span class='line'>0  dev='/dev/sg1'      rwrw-- : 'TSSTcorp' 'DVD+-RW TS-H653B'
+</span><span class='line'>-------------------------------------------------------------------------</span></code></pre></td></tr></table></div></figure>
+
 
 <h3>gist embedding</h3>
 
