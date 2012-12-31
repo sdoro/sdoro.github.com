@@ -4,7 +4,7 @@
   <title><![CDATA[Category: android | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/android/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T10:07:26+01:00</updated>
+  <updated>2012-12-31T10:11:49+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -86,6 +86,26 @@ umount $KNO/source/dev
 </span><span class='line'><span class="c">#adb push $APK/com.google.android.gms-2.apk /system/app/</span>
 </span><span class='line'>
 </span><span class='line'><span class="c"># bot</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span> (Nodo.java)</span> <a href='/downloads/code/Nodo.java'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Nodo</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kt">char</span> <span class="n">info</span><span class="o">;</span>
+</span><span class='line'>  <span class="n">Nodo</span> <span class="n">next</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="nf">Nodo</span> <span class="o">(</span><span class="kt">char</span> <span class="n">c</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="n">info</span> <span class="o">=</span> <span class="n">c</span><span class="o">;</span>
+</span><span class='line'>    <span class="n">next</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'><span class="o">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 ]]></content>
   </entry>
