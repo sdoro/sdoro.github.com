@@ -4,7 +4,7 @@
   <title><![CDATA[Category: netkit | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/netkit/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2012-12-31T10:20:55+01:00</updated>
+  <updated>2012-12-31T10:22:01+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -44,7 +44,7 @@
 
 <h3>Include Code Snippets</h3>
 
-<p>{% include_code pc1.startup lang:sh %}</p>
+<p>{% include_code pc1.startup  %}</p>
 
 <h3>Include Code Snippets</h3>
 
