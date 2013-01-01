@@ -4,7 +4,7 @@
   <title><![CDATA[Category: puppet | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/puppet/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2013-01-01T08:37:45+01:00</updated>
+  <updated>2013-01-01T08:39:22+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -46,7 +46,7 @@ $ wodim --devices</p>
 
 <p>{% include_code lang:sh router1.startup %}</p>
 
-<h3>Image tag</h3>
+<h3>Image tag (android)</h3>
 
 <p>{% img http://farm9.staticflickr.com/8359/8299938355_4c81304181_z_d.jpg %}</p>
 
@@ -61,6 +61,8 @@ $ wodim --devices</p>
 <h3>Image tag (netkit)</h3>
 
 <p>{% img http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_m_d.jpg %}</p>
+
+<h2>end</h2>
 ]]></content>
   </entry>
   
