@@ -4,7 +4,7 @@
   <title><![CDATA[Category: netkit | sdoro Blog]]></title>
   <link href="http://sdoro.github.com/blog/categories/netkit/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2013-01-01T08:36:49+01:00</updated>
+  <updated>2013-01-01T08:37:45+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -54,7 +54,11 @@ $ wodim --devices</p>
 
 <p>{% img http://farm9.staticflickr.com/8197/8185911194_0873788f86_c_d.jpg %}</p>
 
+<h3>Image tag (puppetDB)</h3>
+
 <p>{% http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_z_d.jpg %}</p>
+
+<h3>Image tag (netkit)</h3>
 
 <p>{% img http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_m_d.jpg %}</p>
 ]]></content>
