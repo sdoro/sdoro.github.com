@@ -4,7 +4,7 @@
   <title><![CDATA[sdoro Blog]]></title>
   <link href="http://sdoro.github.com/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2013-01-01T08:40:01+01:00</updated>
+  <updated>2013-01-01T08:40:48+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -228,13 +228,9 @@ umount $KNO/source/dev
 
 <p><img src="http://farm9.staticflickr.com/8359/8299938355_4c81304181_z_d.jpg"></p>
 
-<h3>Image tag</h3>
-
-<p><img src="http://farm9.staticflickr.com/8197/8185911194_0873788f86_c_d.jpg"></p>
-
 <h3>Image tag (puppetDB)</h3>
 
-<p><img src="http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_z_d.jpg"></p>
+<p><img src="http://farm9.staticflickr.com/8197/8185911194_0873788f86_c_d.jpg"></p>
 
 <h3>Image tag (netkit)</h3>
 
