@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: xen | sdoro Blog]]></title>
+  <link href="http://sdoro.github.com/blog/categories/xen/atom.xml" rel="self"/>
+  <link href="http://sdoro.github.com/"/>
+  <updated>2013-01-02T21:51:49+01:00</updated>
+  <id>http://sdoro.github.com/</id>
+  <author>
+    <name><![CDATA[sdoro]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[first 2013 day]]></title>
+    <link href="http://sdoro.github.com/blog/2013/01/02/first-2013-day/"/>
+    <updated>2013-01-02T14:43:00+01:00</updated>
+    <id>http://sdoro.github.com/blog/2013/01/02/first-2013-day</id>
+    <content type="html"><![CDATA[<h3>Phone call at 8 am</h3>
+
+<p>This morning I received a call from an operator that tells me that
+the services were down.</p>
+
+<p>The system is made up of:
+* two Sun server (X4450) with CentOS 5.X, Xen dom0,
+* one DRBD resource for each services,
+* a first cluster that control DRBD and Xen,
+* a second cluster that controls the services (over the first level).</p>
+
+<p>The server are connected using trunking/bounding pairs of NIC
+both for a layer 3 switch (HP Procurve 2824)
+and for connect to one another.</p>
+
+<p>All the DRBD resources are in the correct state but one
+was in stalled state.</p>
+
+<p>I changed the status of all service in cluster level-2 in 'standby'
+mode with:</p>
+
+<pre><code>    # crm node standby &lt;vm-domU-lev2&gt;
+</code></pre>
+
+<p>than I changed status also for cluster level-1:</p>
+
+<pre><code>    # crm node standby &lt;vm-domU-lev1&gt;
+</code></pre>
+
+<p>than I try to restart manually the 'stalled' DRBD resource.
+I follow the instruction for "manual split brain recovery" but
+this case is different because the two server have
+distinct roles:</p>
+
+<pre><code>    dom0-a# /etc/init.d/drbd start
+    dom0-b# /etc/init.d/drbd start
+</code></pre>
+
+<p>Set primary/secondary the resource:</p>
+
+<pre><code>    dom0-a# drbdadm primary &lt;resource&gt;
+    dom0-b# drbdadm secondary &lt;resource&gt;
+</code></pre>
+
+<p>Disconnect the "wrong" side and connect it (to force resync):</p>
+
+<pre><code>    dom0-b# drbdadm disconnect &lt;resource&gt;
+    dom0-b# drbdadm --  --discard-my-data connect &lt;resource&gt;
+</code></pre>
+
+<p>We observe the starting of sync process but after little time
+the resource goes into 'stalled' state.
+I repeat the last steps a few time but with the same results.</p>
+
+<p>After 2 hours of test I suppose that the switch was
+"in messy" and force to reboot it.
+This action was decisive :)</p>
+
+<p>After some investigation I discover that in December 2012 HP releases
+a firmware upgrade that covers some problem with this switch ...</p>
+]]></content>
+  </entry>
+  
+</feed>

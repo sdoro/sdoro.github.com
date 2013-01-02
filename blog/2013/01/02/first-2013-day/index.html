@@ -5,12 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>after Maya release - sdoro Blog</title>
+  <title>first 2013 day - sdoro Blog</title>
   <meta name="author" content="sdoro">
 
   
-  <meta name="description" content="Released the Netkit augmented Knoppix DVD After mr. Knopper has released Knoppix 7.0.5 as &#8220;The Final 21.12.2012 Release&#8221;
-we release the &hellip;">
+  <meta name="description" content="Phone call at 8 am This morning I received a call from an operator that tells me that
+the services were down. The system is made up of:
+* two Sun &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +20,7 @@ we release the &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sdoro.github.com/blog/2012/12/31/after-maya-release/">
+  <link rel="canonical" href="http://sdoro.github.com/blog/2013/01/02/first-2013-day/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +69,7 @@ we release the &hellip;">
   
   <header>
     
-      <h1 class="entry-title">After Maya Release</h1>
+      <h1 class="entry-title">First 2013 Day</h1>
     
     
       <p class="meta">
@@ -84,19 +85,73 @@ we release the &hellip;">
   
 
 
-<time datetime="2012-12-31T18:44:00+01:00" pubdate data-updated="true">Dec 31<span>st</span>, 2012</time>
+<time datetime="2013-01-02T14:43:00+01:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><h3>Released the Netkit augmented Knoppix DVD</h3>
+<div class="entry-content"><h3>Phone call at 8 am</h3>
 
-<p>After mr. Knopper has released Knoppix 7.0.5 as &#8220;The Final 21.12.2012 Release&#8221;
-we release the &#8220;After Maya&#8221; netkit DVD :)</p>
+<p>This morning I received a call from an operator that tells me that
+the services were down.</p>
 
-<p><img src="http://farm9.staticflickr.com/8492/8329740977_fec88c2eb1_n_d.jpg"></p>
+<p>The system is made up of:
+* two Sun server (X4450) with CentOS 5.X, Xen dom0,
+* one DRBD resource for each services,
+* a first cluster that control DRBD and Xen,
+* a second cluster that controls the services (over the first level).</p>
+
+<p>The server are connected using trunking/bounding pairs of NIC
+both for a layer 3 switch (HP Procurve 2824)
+and for connect to one another.</p>
+
+<p>All the DRBD resources are in the correct state but one
+was in stalled state.</p>
+
+<p>I changed the status of all service in cluster level-2 in &#8216;standby&#8217;
+mode with:</p>
+
+<pre><code>    # crm node standby &lt;vm-domU-lev2&gt;
+</code></pre>
+
+<p>than I changed status also for cluster level-1:</p>
+
+<pre><code>    # crm node standby &lt;vm-domU-lev1&gt;
+</code></pre>
+
+<p>than I try to restart manually the &#8216;stalled&#8217; DRBD resource.
+I follow the instruction for &#8220;manual split brain recovery&#8221; but
+this case is different because the two server have
+distinct roles:</p>
+
+<pre><code>    dom0-a# /etc/init.d/drbd start
+    dom0-b# /etc/init.d/drbd start
+</code></pre>
+
+<p>Set primary/secondary the resource:</p>
+
+<pre><code>    dom0-a# drbdadm primary &lt;resource&gt;
+    dom0-b# drbdadm secondary &lt;resource&gt;
+</code></pre>
+
+<p>Disconnect the &#8220;wrong&#8221; side and connect it (to force resync):</p>
+
+<pre><code>    dom0-b# drbdadm disconnect &lt;resource&gt;
+    dom0-b# drbdadm --  --discard-my-data connect &lt;resource&gt;
+</code></pre>
+
+<p>We observe the starting of sync process but after little time
+the resource goes into &#8216;stalled&#8217; state.
+I repeat the last steps a few time but with the same results.</p>
+
+<p>After 2 hours of test I suppose that the switch was
+&#8220;in messy&#8221; and force to reboot it.
+This action was decisive :)</p>
+
+<p>After some investigation I discover that in December 2012 HP releases
+a firmware upgrade that covers some problem with this switch &#8230;</p>
 </div>
 
 
@@ -119,12 +174,12 @@ we release the &#8220;After Maya&#8221; netkit DVD :)</p>
   
 
 
-<time datetime="2012-12-31T18:44:00+01:00" pubdate data-updated="true">Dec 31<span>st</span>, 2012</time>
+<time datetime="2013-01-02T14:43:00+01:00" pubdate data-updated="true">Jan 2<span>nd</span>, 2013</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/knoppix/'>knoppix</a>, <a class='category' href='/blog/categories/netkit-/'>netkit,</a>
+    <a class='category' href='/blog/categories/cluster/'>cluster</a>, <a class='category' href='/blog/categories/crm/'>crm</a>, <a class='category' href='/blog/categories/drbd/'>drbd</a>, <a class='category' href='/blog/categories/switch/'>switch</a>, <a class='category' href='/blog/categories/xen/'>xen</a>
   
 </span>
 
@@ -133,7 +188,7 @@ we release the &#8220;After Maya&#8221; netkit DVD :)</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sdoro.github.com/blog/2012/12/31/after-maya-release/" data-via="" data-counturl="http://sdoro.github.com/blog/2012/12/31/after-maya-release/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sdoro.github.com/blog/2013/01/02/first-2013-day/" data-via="" data-counturl="http://sdoro.github.com/blog/2013/01/02/first-2013-day/" >Tweet</a>
   
   
   
@@ -142,10 +197,8 @@ we release the &#8220;After Maya&#8221; netkit DVD :)</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/12/31/testing-octopress/" title="Previous Post: testing Octopress">&laquo; testing Octopress</a>
+        <a class="basic-alignment left" href="/blog/2012/12/31/after-maya-release/" title="Previous Post: after Maya release">&laquo; after Maya release</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2013/01/02/first-2013-day/" title="Next Post: first 2013 day">first 2013 day &raquo;</a>
       
     </p>
   </footer>
