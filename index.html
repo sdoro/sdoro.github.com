@@ -10,7 +10,7 @@
 
   
   <meta name="description" content="Phone call at 8 am This morning I received a call from an operator that tells me that
-the services were down. The system is made up of: * two Sun &hellip;">
+the services were down. The system is made up of: two Sun &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -99,11 +99,15 @@ the services were down. The system is made up of: * two Sun &hellip;">
 <p>This morning I received a call from an operator that tells me that
 the services were down.</p>
 
-<p>The system is made up of:
- * two Sun server (X4450) with CentOS 5.X, Xen dom0,
- * one DRBD resource for each services,
- * a first cluster that control DRBD and Xen,
- * a second cluster that controls the services (over the first level).</p>
+<p>The system is made up of:</p>
+
+<ul>
+<li>two Sun server (X4450) with CentOS 5.X, Xen dom0,</li>
+<li>one DRBD resource for each services,</li>
+<li>a first cluster that control DRBD and Xen,</li>
+<li>a second cluster that controls the services (over the first level).</li>
+</ul>
+
 
 <p>The server are connected using trunking/bounding pairs of NIC
 both for a layer 3 switch (HP Procurve 2824)
