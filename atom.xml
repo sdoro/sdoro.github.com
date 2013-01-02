@@ -4,7 +4,7 @@
   <title><![CDATA[sdoro Blog]]></title>
   <link href="http://sdoro.github.com/atom.xml" rel="self"/>
   <link href="http://sdoro.github.com/"/>
-  <updated>2013-01-02T21:57:37+01:00</updated>
+  <updated>2013-01-02T21:59:33+01:00</updated>
   <id>http://sdoro.github.com/</id>
   <author>
     <name><![CDATA[sdoro]]></name>
@@ -72,7 +72,7 @@ distinct roles:</p>
 
 <p>We observe the starting of sync process but after little time
 the resource goes into &#8216;stalled&#8217; state.
-I repeat the last steps a few time but with the same results.</p>
+I repeat the last steps a few times but with the same results.</p>
 
 <p>After 2 hours of test I suppose that the switch was
 &#8220;in messy&#8221; and force to reboot it.
